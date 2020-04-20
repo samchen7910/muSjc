@@ -1,0 +1,6 @@
+framework module Pods_muSjc {
+  umbrella header "Pods-muSjc-umbrella.h"
+
+  export *
+  module * { export * }
+}
