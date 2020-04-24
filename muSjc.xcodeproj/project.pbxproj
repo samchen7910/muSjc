@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		E808FB22244E573F0007BCDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E808FB21244E573F0007BCDE /* Assets.xcassets */; };
 		E808FB25244E573F0007BCDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E808FB23244E573F0007BCDE /* LaunchScreen.storyboard */; };
 		E808FB30244E573F0007BCDE /* muSjcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E808FB2F244E573F0007BCDE /* muSjcTests.swift */; };
+		E8875BF1245388F800A6FA62 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8875BF0245388F800A6FA62 /* GoogleService-Info.plist */; };
+		E8875BF4245394B900A6FA62 /* Mock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8875BF3245394B900A6FA62 /* Mock.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		E808FB2B244E573F0007BCDE /* muSjcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = muSjcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E808FB2F244E573F0007BCDE /* muSjcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = muSjcTests.swift; sourceTree = "<group>"; };
 		E808FB31244E573F0007BCDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8875BF0245388F800A6FA62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E8875BF3245394B900A6FA62 /* Mock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mock.generated.swift; path = muSjcTests/Generated/Mock.generated.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +80,6 @@
 				8CF788B791ADDF7AC248DCAB /* Pods-muSjcTests.debug.xcconfig */,
 				24C8AFA9D29F74C333682D45 /* Pods-muSjcTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -118,6 +121,7 @@
 				E808FB1E244E573D0007BCDE /* Main.storyboard */,
 				E808FB21244E573F0007BCDE /* Assets.xcassets */,
 				E808FB23244E573F0007BCDE /* LaunchScreen.storyboard */,
+				E8875BF0245388F800A6FA62 /* GoogleService-Info.plist */,
 				E808FB26244E573F0007BCDE /* Info.plist */,
 			);
 			path = muSjc;
@@ -126,10 +130,19 @@
 		E808FB2E244E573F0007BCDE /* muSjcTests */ = {
 			isa = PBXGroup;
 			children = (
+				E8875BF2245393FA00A6FA62 /* Mocks */,
 				E808FB2F244E573F0007BCDE /* muSjcTests.swift */,
 				E808FB31244E573F0007BCDE /* Info.plist */,
 			);
 			path = muSjcTests;
+			sourceTree = "<group>";
+		};
+		E8875BF2245393FA00A6FA62 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E8875BF3245394B900A6FA62 /* Mock.generated.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +156,7 @@
 				E808FB11244E573D0007BCDE /* Sources */,
 				E808FB12244E573D0007BCDE /* Frameworks */,
 				E808FB13244E573D0007BCDE /* Resources */,
+				5EF2A769EBD1D80C27579A92 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +175,7 @@
 				E808FB27244E573F0007BCDE /* Sources */,
 				E808FB28244E573F0007BCDE /* Frameworks */,
 				E808FB29244E573F0007BCDE /* Resources */,
+				98CF186FC22C2B1DD1154CEB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E808FB25244E573F0007BCDE /* LaunchScreen.storyboard in Resources */,
+				E8875BF1245388F800A6FA62 /* GoogleService-Info.plist in Resources */,
 				E808FB22244E573F0007BCDE /* Assets.xcassets in Resources */,
 				E808FB20244E573D0007BCDE /* Main.storyboard in Resources */,
 			);
@@ -231,6 +247,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5EF2A769EBD1D80C27579A92 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-muSjc/Pods-muSjc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-muSjc/Pods-muSjc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-muSjc/Pods-muSjc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98CF186FC22C2B1DD1154CEB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-muSjcTests/Pods-muSjcTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-muSjcTests/Pods-muSjcTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-muSjcTests/Pods-muSjcTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E91D64B0D6D3C6A7EEBFCEF3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -292,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8875BF4245394B900A6FA62 /* Mock.generated.swift in Sources */,
 				E808FB30244E573F0007BCDE /* muSjcTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

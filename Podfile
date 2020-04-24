@@ -1,15 +1,37 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '11.4'
+
+def shared_pods
+	  use_frameworks!
+				
+		# Pods
+		pod 'Swinject'
+		pod 'SwinjectStoryboard', :git => 'https://github.com/Swinject/SwinjectStoryboard.git', :branch => 'master'
+		pod 'SwinjectAutoregistration'
+		
+		pod 'RxSwift'
+		pod 'RxCocoa'
+		
+		pod 'IQKeyboardManagerSwift'
+		
+		pod 'Firebase'
+		pod 'Moya', '~> 13.0'
+	
+end
 
 target 'muSjc' do
-  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+	shared_pods
+end
 
-  # Pods for muSjc
-
-  target 'muSjcTests' do
+target 'muSjcTests' do
     inherit! :search_paths
-    # Pods for testing
-  end
+		shared_pods
+		
+		pod 'SnapshotTesting', '~> 1.2'
+		pod 'SwiftyMocky'
+		pod 'Nimble'
 
+		pod 'RxBlocking'
+		pod 'RxTest'
 end
